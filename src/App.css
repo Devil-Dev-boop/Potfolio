@@ -1,38 +1,410 @@
-.App {
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #1d1d1d;
+}
+#root{
+  height: 100%;
+  
+}
+
+/* Navbar */
+.container{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 10rem;
+  background: #1d1d1d;
+  border-right: 1px solid #282828;
+  position: fixed;
+  
+}
+.top{
+  flex-basis: 30%;
+  background: #000;
+}
+.top img{
+  width: 10rem;
+}
+ .text h1, .text p{
+  font-family: 'Open Sans';
+  color: #a5a5a5;
+  text-align: center;
+}
+.text h1{
+  color: white;
+}
+.middle{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #282828;
+}
+.middle a{
+  text-decoration: none;
+  text-align: center;
+  width: 100%;
+  font-size: 1.6rem;
+  color: #909096;
+  line-height: 5rem;
+  border-bottom: 1px solid #282828;
+  transition: color 0.3s, background-color 0.3s;
+}
+.middle a:hover{
+  color:#08fdd8;
+}
+.bottom{
+  margin: auto;
+
+}
+.social{
+  color: #909096;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0; 
+}
+.social li{
+  text-align: center;
+  justify-content: center;
+}
+.social li a {
+  padding: 2rem 7px;
+}
+svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-1d159sf-MuiSvgIcon-root :hover{
+  color:#08fdd8; 
+}
+
+.home{
+ margin: 16rem;
+}
+
+.home h1{
+  color: white;
+  font-size: 5rem;
+  
+}
+
+.home .m{
+  color:#08fdd8;
+  font-size:7rem;
+  font-family: cursive;
+}
+
+.home p{
+ color: grey;
+ font-size: 2rem;
+}
+
+
+.contact-me{
+    font-size: 20px;
+    color: #08fdd8;
+    display: inline-block;
+    padding: 1em 2em;
+    text-align: center;
+    background: linear-gradient(to left, #1d1d1d 50%, #08fdd8 50%) right;
+    background-size: 200%;
+    transition: .5s ease-out;
+    border: 1px solid #08fdd8;
+  
+}
+.contact-me:hover{
+  background-position: left;
+  color:#1d1d1d
+  
+}
+
+
+
+
+
+/* Links pages */
+
+.about-myself{
+  display: flex;
+  align-items: center;
+  margin: 4rem;
+
+}
+.about-myself .m{
+  color:#08fdd8;
+  font-size:7rem;
+  font-family: cursive;
+}
+
+
+.about-myself  h1{
+  font-size: 3.5rem;
+  color: white;
+}
+.about-myself  p{
+  font-size: 1.5rem;
+  color: grey;
+}
+.user-image img{
+  width: 20rem;
+  padding-left: 2rem;
+  
+}
+.about-myself .contact-me{
+  font-size: 1rem;
+  
+}
+
+
+
+
+/* Bounce Effect  */
+
+
+
+.bouncy-text:hover {
+  transition: bounce 0.5s;
+  transform-origin: center;
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.2);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  75% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.bouncy-text {
+  display: inline-block;
+  animation-duration: 0.5s;
+  animation-name: none;
+  animation-fill-mode: both;
+  animation-timing-function: ease;
+  
+}
+
+.bouncy-text:hover {
+  animation-name: bounce;
+  color: #08fdd8;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+  transform: translateY(-10px); 
+}
+.space{
+  letter-spacing: 1rem;
+}
+.flex{
+  display: flex;
+  gap: 7rem;
+  
+}
+
+
+
+
+
+
+.content{
+  margin: 16rem;
+}
+
+.content h2{
+font-size: 5rem;
+color:#08fdd8;
+}
+.content p{
+  color: white;
+  font-size: 1.5rem;
+}
+
+
+
+
+
+
+
+.about{
+  margin: 16rem;
+}
+
+.about h2{
+  font-size: 5rem;
+  color:#08fdd8;
+}
+.about p{
+  color: white;
+  font-size: 1.5rem;
+  justify-content: center;
+}
+.about p a {
+  color: #08fdd8;
+  text-decoration: none;
+}
+
+
+
+
+
+.contact{
+  margin: 16rem;
+}
+.contact h2{
+  font-size: 5rem;
+  color:#08fdd8;
+}
+.contact p{
+  color: white;
+  font-size: 1.2rem;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+
+.wrapper {
+  background-color:#2b2b2b;
+  border-radius: 2px;
+  box-shadow: 0px 2px 1px 0px #DDD;
+  box-sizing: border-box;
+  height: 15rem;
+}
+
+.input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #CCC;
+  color: #2b2b2b;
+  box-sizing: border-box;
+  font-family: 'Arvo';
+  font-size: 1rem;
+  height: 5rem;
+  left: 50%;
+  padding: 10px 0px;
+  top: 50%;
+  width: 100%;
+  padding: 0;
+  text-align: center;
+}
+   input.input:focus {
+    outline: none;    
+  }
+
+input.input::-webkit-input-placeholder {
+  color: #AAA;
+}
+
+input.input:focus::-webkit-input-placeholder {
+  color: #2B2B2B;
+}
+
+.input.input:focus+.underline {
+  transform: scale(1);
+}
+
+.underline {
+  background-color: #08fdd8;
+  display: inline-block;
+  height: 2px;
+  transform: scale(0, 1);
+  transition: all 0.5s linear;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.temp{
+  position: relative;
+}
+
+textarea{
+  background-color:#2b2b2b;
+  text-align: center;
+  width: 100%;
+}
+.button{
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+
+
+@media (max-width: 1024px) {
+  .home h1 {
+    font-size: 3rem;
+  }
+  .content h2{
+    font-size: 3rem;
+  }
+  .about h2{
+    font-size: 3rem;
+  }
+  .contact h2{
+    font-size: 3rem;
+  }
+  .home .m{
+    font-size: 4rem;
+  }
+  .contact p {
+    font-size: 1.6rem;
+    margin: 2rem 0;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+
+
+@media (max-width: 820px) {
+  .home h1 {
+    font-size: 2rem;
+  }
+  .content h2{
+    font-size: 2rem;
+  }
+  .about h2{
+    font-size: 2rem;
+  }
+  .contact h2{
+    font-size: 2rem;
+  }
+  .home .m{
+    font-size: 3rem;
+  }
+  .contact p {
+    font-size: 1.4rem;
+    margin: 1.5rem 0;
+  }
 }
 
-.App-link {
-  color: #61dafb;
+@media (max-width: 480px) {
+  .home h1 {
+    font-size: 1.4rem;
+  }
+  .content h2{
+    font-size:1.4rem;
+  }
+  .about h2{
+    font-size: 1.4rem;
+  }
+  .contact h2{
+    font-size: 1.4rem;
+  }
+  .home .m{
+    font-size: 2rem;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+

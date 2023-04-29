@@ -1,25 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import Home from "./components /Home";
+import Skills from "./components /Skills";
+import Contact from "./components /Contact";
+import About from "./components /About";
+import { useState } from "react";
+
+
 
 function App() {
+  const [showPic , setShowPic] = useState(false)
+
+
+  const handleShowPic = () => {
+    setShowPic(true)
+  }
+  const handleHidePic = () => {
+    setShowPic(false)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Router>
+     
+        <Routes>
+          <Route path="/" element={<Home onShowPic={handleShowPic}/>}  />
+          <Route path="/about" element={<About showpic ={showPic} onHidePic={handleHidePic}/>} />
+          <Route path="/contact" element={< Contact />} />
+          <Route path="/skills" element={<Skills />} />
+        
+        </Routes>
+        
+      </Router>
+
+
+    </>
   );
 }
 
-export default App;
+
+export default  App ;
